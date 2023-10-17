@@ -12,22 +12,22 @@
             <div>
                 <div class="form-check form-check-inline">
                     <label class="form-control">
-                    <input type="radio" name="wor_type" value="1" checked> Recepção
+                    <input type="radio" name="wor_type" value="1" <?=$obWorker->wor_type == 1 ? 'checked' : ''?>> Recepção
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-control">
-                    <input type="radio" name="wor_type" value="2"> Enfermagem
+                    <input type="radio" name="wor_type" value="2" <?=$obWorker->wor_type == 2 ? 'checked' : ''?>> Enfermagem
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-control">
-                    <input type="radio" name="wor_type" value="3"> Med
+                    <input type="radio" name="wor_type" value="3" <?=$obWorker->wor_type == 3 ? 'checked' : ''?>> Med
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-control">
-                    <input type="radio" name="wor_type" value="4"> Farmacia
+                    <input type="radio" name="wor_type" value="4" <?=$obWorker->wor_type == 4 ? 'checked' : ''?>> Farmacia
                     </label>
                 </div>
             </div>

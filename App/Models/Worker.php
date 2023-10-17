@@ -34,6 +34,10 @@ class Worker{
             'wor_doc' => $this->wor_doc
         ]);
     }
+    //Metodo responsavel por excluir Worker do Banco
+    public function DeleteWorker(){
+        return (new Database('worker'))->deleteWorker('wor_id ='.$this->wor_id);
+    }
 
 
     // Metodo responsavel por obter os Workers do banco de dados

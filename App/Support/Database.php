@@ -73,6 +73,16 @@ class Database{
 
         return true;
     }
+    // Metodo repsonsavel por excluir dados do banco
+    public function deleteWorker($where){
+        //Monta a query
+        $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+        //Executa a Query
+        $this->execute($query);
+
+        // Retorna Sucesso
+        return true;
+    }
 
 }
 

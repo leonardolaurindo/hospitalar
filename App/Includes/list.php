@@ -1,4 +1,16 @@
 <?php
+    $message = '';
+    if(isset($_GET['status'])){
+        switch ($_GET['status']) {
+            case 'success':
+                $message='<div class="alert alert-success">Ação executada com sucesso!</div>';
+                break;
+            case 'error':
+                $message='<div class="alert alert-danger">Ação não executada!</div>';
+                break;
+        }
+    }
+
     $results = '';
     foreach($worker as $worker){
         $results .= '<tr>
@@ -18,10 +30,15 @@
                         </td>
                     </tr>';
     }
-
+    $results = strlen($results) ? $results : '<tr>
+                                                <td colspan="4" class="text-center">
+                                                    Nenhum Worker encontrado
+                                                </td>
+                                              </tr> ';
 
 ?>
 <main>
+    <?=$message?>
     <section class="mb-4">
         <a href="register.php">
             <button class="btn btn-primary">Novo Atendimento</button>

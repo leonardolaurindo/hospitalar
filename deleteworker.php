@@ -1,7 +1,6 @@
 <?php 
 
 require __DIR__.'/vendor/autoload.php';
-define('TITLE',"Editar Worker");
 
 use \App\Models\Worker;
 // Validação do ID
@@ -19,22 +18,18 @@ if(!$obWorker instanceof Worker){
     exit;
 }
 
+//echo "<per>"; print_r($obWorker); echo "</pre>"; exit;
+
 //Validação do POST
-if(isset($_POST['wor_type'],$_POST['wor_name'],$_POST['wor_password'],$_POST['wor_email'],$_POST['wor_doc'])){
-    $obWorker->wor_type = $_POST['wor_type'];
-    $obWorker->wor_name = $_POST['wor_name'];
-    $obWorker->wor_password = $_POST['wor_password'];
-    $obWorker->wor_email = $_POST['wor_email'];
-    $obWorker->wor_doc = $_POST['wor_doc'];
-    //"<pre>"; print_r($obWorker); echo "</pre>"; exit;
-    $obWorker->updateWorker(); 
+if(isset($_POST['delete'])){
+    $obWorker->DeleteWorker(); 
     header('location: index.php?status=success');
     exit;
 }
 
 
 include __DIR__.'/App/Includes/header.php';
-include __DIR__.'/App/Includes/addworker.php';
+include __DIR__.'/App/Includes/deleteworker.php';
 include __DIR__.'/App/Includes/footer.php';
 
 ?>
