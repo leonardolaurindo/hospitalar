@@ -12,7 +12,7 @@ if(isset($_POST['wor_type'],$_POST['wor_name'],$_POST['wor_password'],$_POST['wo
     $obWorker->wor_password = $_POST['wor_password'];
     $obWorker->wor_email = $_POST['wor_email'];
     $obWorker->wor_doc = $_POST['wor_doc'];
-    $obWorker->NewWorker();
+    $obWorker->newWorker();
     header('location: index.php?status=success');
     exit;
 }

@@ -22,7 +22,7 @@ if(!$obWorker instanceof Worker){
 
 //Validação do POST
 if(isset($_POST['delete'])){
-    $obWorker->DeleteWorker(); 
+    $obWorker->deleteWorker(); 
     header('location: index.php?status=success');
     exit;
 }

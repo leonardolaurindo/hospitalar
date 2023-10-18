@@ -3,7 +3,7 @@ namespace App\Support;
 use \PDO;
 use PDOException;
 
-class Database{
+class WorkerController{
     const HOST = 'localhost';
     const NAME = 'hospitalar';
     const USER = 'root';
@@ -62,7 +62,7 @@ class Database{
 
     // Metodo responsavel por atualizar banco de dados
     public function updateWorker($where, $values){
-        //Dados da Query
+        //Dados da Query 
         $fields = array_keys($values);
         
         //Monta a Query
